@@ -15,11 +15,12 @@
   </header>
     <div id="map" style="width: 80%; height: 80vh;"></div>
     <div id="coordinates" class="coordinates"></div>
-    <audio id="background-audio" src="background-music.mp3" autoplay loop muted></audio>
+    <audio id="background-audio" src="background-music.mp3" autoplay loop></audio>
     <div id="audio-controls">
-        <button id="mute-unmute-btn">Mute</button>
-        <input id="volume-slider" type="range" min="0" max="1" step="0.1" value="1">
-    </div>
+    <button id="play-btn">Play</button>
+    <button id="mute-unmute-btn">Mute</button>
+    <input id="volume-slider" type="range" min="0" max="1" step="0.1" value="1">
+</div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.2/dist/leaflet.draw-src.js"></script>
