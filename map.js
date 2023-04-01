@@ -153,7 +153,7 @@ var poi3PopupContent = `
     <h2>Westfall</h2>
     <p>Westfall is the bustling human capital located on a southwestern isle in the Shattered Realms. Surrounded by natural defenses, the city stands as a beacon of hope and prosperity. The city's strategic location on an island fortifies its defenses, with a grand bridge connecting it to the mainland, ensuring easy access for trade and travel.
 </p>
-<img src="westfall.jpg" alt="Westfall" width="200" />
+<img src="westfall.jpg" alt="Westfall" width="300" />
 `;
 
 // Bind popup to the second point of interest
