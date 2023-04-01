@@ -19,7 +19,7 @@ var zone = L.polygon([
     [-342, -675],
     [17, -952]
 ], {
-    color: 'red'
+    color: 'cadetblue'
 }).addTo(map);
 
 // Function to change zone color
@@ -116,7 +116,7 @@ map.on('draw:created', function (e) {
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+// 'blue', 'white', 'red','darkred', 'lightred', 'orange', 'beige', 'green', 'darkgreen', 'lightgreen', 'blue', 'darkblue', 'lightblue', 'purple', 'darkpurple', 'pink', 'cadetblue', 'white', 'gray', 'lightgray', 'black' 
 // Create a new AwesomeMarker with a custom color
 var poi2Icon = L.AwesomeMarkers.icon({
   icon: 'info-sign', // Changed this to a different icon
@@ -141,7 +141,7 @@ poi2.bindPopup(poi2PopupContent);
 // Create a new AwesomeMarker with a custom color
 var poi3Icon = L.AwesomeMarkers.icon({
   icon: 'info-sign', // Changed this to a different icon
-    markerColor: 'blue', // Change this to any color you'd like
+    markerColor: 'cadetblue', // Change this to any color you'd like
     prefix: 'glyphicon' // Changed this to 'glyphicon' instead of 'fa'
 });
 
@@ -165,7 +165,7 @@ poi3.bindPopup(poi3PopupContent);
 // Create a new AwesomeMarker with a custom color
 var poi4Icon = L.AwesomeMarkers.icon({
   icon: 'info-sign', // Changed this to a different icon
-    markerColor: 'blue', // Change this to any color you'd like
+    markerColor: 'cadetblue', // Change this to any color you'd like
     prefix: 'glyphicon' // Changed this to 'glyphicon' instead of 'fa'
 });
 
