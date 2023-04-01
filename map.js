@@ -20,12 +20,13 @@ var zone = L.polygon([
     [-193, -821],
     [-61, -833]
 ], {
-    color: 'grey'
+    color: 'lightblue'
 }).addTo(factionsLayer);
 
 var zonePopupContent = `
     <h2>Westfall</h2>
-    <p>Currently neutral.</p>
+    <p>Gives a 10 iron and 20 lumber production daily. Currently under the control of the Khaganate.</p>
+    <img src="khans.png" alt="Khans" width="300" />
 `;
 
 // Bind popup to zone
@@ -33,36 +34,21 @@ zone.bindPopup(zonePopupContent);
 
 
 // Create sample zone polygon for factionsLayer
-var zone2 = L.polygon([
-    [-160, -806],
-    [-184, -781],
-    [-113, -663],
-    [-95, -692]
-], {
-    color: 'gray'
-}).addTo(factionsLayer); // Add the zone2 polygon to factionsLayer instead of the main map
-
-var zone2PopupContent = `
-    <h2>The Bridge</h2>
-    <p>Currently neutral.</p>
-`;
-
-// Bind popup to zone
-zone2.bindPopup(zone2PopupContent);
-
-// Create sample zone polygon for factionsLayer
 var zone3 = L.polygon([
     [-344, -972],
     [-522, -952],
     [-513, -750],
-    [-278, -797]
+    [-61, -516],
+    [-3, -696],
+    [-280, -796],
 ], {
-    color: 'gray'
+    color: 'black'
 }).addTo(factionsLayer); // Add the zone3 polygon to factionsLayer instead of the main map
 
 var zone3PopupContent = `
     <h2>Farmlands</h2>
-    <p>Currently neutral.</p>
+    <p> Gives a 20 wheat production daily. Currently under the control of SHLP.</p>
+    <img src="slhp.png" alt="SLHP" width="300" />
 `;
 
 // Bind popup to zone
