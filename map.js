@@ -41,8 +41,7 @@ function changePOIColor(newColor) {
 // Zone popup content
 var zonePopupContent = `
     <h2>Westfall Zone of Influence</h2>
-    <p>The Westfall Zone of Influence is an area that showcases the power of good and low threats. As the capital of the human kingdom and central hub for trade with other good-aligned races, Westfall has worked hard to create a peaceful and prosperous environment for its citizens. The zone of influence is an extension of this, offering visitors a glimpse into the safety and security of the land. With well-trained guards and patrols, travelers can rest assured that they are in good hands.</p>
-    <img src="path/to/zone-image.jpg" alt="Zone image" width="200" />
+    <p>The Westfall Zone of Influence is a protective safe zone that extends around Westfall. This area serves as a sanctuary for weary travelers and citizens seeking respite from the constant threats of orcs and goblins. Under the watchful eye of Westfall's skilled guards, peace and tranquility are maintained within the zone, allowing inhabitants to focus on their daily lives without fear.</p>
 `;
 
 // Bind popup to zone
@@ -131,8 +130,7 @@ var poi2 = L.marker([-153, -731], {icon: poi2Icon}).addTo(map);
 // Second Point of Interest popup content
 var poi2PopupContent = `
     <h2>Westfall Bridge</h2>
-    <p>The Westfall Bridge is a remarkable feat of engineering that connects the mainland to the isle of Westfall. This stunning structure spans a great distance and offers travelers a breathtaking view of the surrounding landscape. It has become a popular attraction in its own right, with many visitors taking the time to admire its design and take pictures. For those looking to explore the isle of Westfall, the bridge is the perfect starting point.</p>
-    <img src="path/to/poi2-image.jpg" alt="Second Point of Interest image" width="200" />
+    <p>The Westfall Bridge is an impressive and sturdy structure that spans the waters east of Westfall, connecting the island capital to the mainland. With its fortified ramparts and watchtowers, the bridge is not only a vital artery for trade and communication but also a formidable defensive bulwark against any potential invasion.</p>
 `;
 
 // Bind popup to the second point of interest
@@ -153,8 +151,9 @@ var poi3 = L.marker([-117, -918], {icon: poi3Icon}).addTo(map);
 // Second Point of Interest popup content
 var poi3PopupContent = `
     <h2>Westfall</h2>
-    <p>Westfall is situated at the south-western coast of the Shattered Realms, and it serves as the capital of the human kingdom but it also acts as the central hub for trade with the other good aligned races in the land. From its grand port on the western coast, ships set sail to Eryndor, the elven kingdom in the East, bearing goods and helping  improve the development of the bright side factions and cities.
+    <p>Westfall is the bustling human capital located on a southwestern isle in the Shattered Realms. Surrounded by natural defenses, the city stands as a beacon of hope and prosperity. The city's strategic location on an island fortifies its defenses, with a grand bridge connecting it to the mainland, ensuring easy access for trade and travel.
 </p>
+<img src="westfall.jpg" alt="Westfall" width="200" />
 `;
 
 // Bind popup to the second point of interest
@@ -176,7 +175,7 @@ var poi4 = L.marker([-475, -836], {icon: poi4Icon}).addTo(map);
 // Second Point of Interest popup content
 var poi4PopupContent = `
     <h2>Farmlands</h2>
-    <p>The Farmlands of Westfall are an essential component of the region, as they provide a constant supply of food to feed the population. The fertile soil and mild climate make it an ideal location for farming, and the locals take great pride in their agricultural heritage. Visitors to the Farmlands can take a stroll through the fields and see firsthand the hard work that goes into producing the crops that sustain the kingdom. The lush greenery and fresh air make it a relaxing and enjoyable experience.
+    <p>Located just south of Westfall's gates, the Farmlands are the breadbasket of the island capital. The fertile soil and mild climate allow for a bountiful harvest of various crops, ensuring a steady supply of food for the city's inhabitants. The Farmlands are also home to numerous farmers and their families, who work tirelessly to cultivate and maintain the land, contributing to the prosperity of Westfall.
 </p>
 `;
 
