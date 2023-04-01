@@ -8,44 +8,83 @@ var map = L.map('map', {
 // Set up the custom JPEG background
 var imageUrl = 'map.jpg';
 var imageBounds = [[-1080, -1440], [1080, 1440]]; // Set appropriate bounds for your image
-var backgroundLayer = L.imageOverlay(imageUrl, imageBounds).addTo(map);
+var backgroundLayer = L.imageOverlay(imageUrl, imageBounds);
+
+const factionsLayer = L.layerGroup();
+
 
 // Create sample zone polygon
 var zone = L.polygon([
-    [-10, -1052],
-    [-500, -1073],
-    [-797, -804],
-    [-822, -664],
-    [-342, -675],
-    [17, -952]
+    [-54, -1032],
+    [-219, -1025],
+    [-193, -821],
+    [-61, -833]
 ], {
-    color: 'cadetblue'
-}).addTo(map);
+    color: 'grey'
+}).addTo(factionsLayer);
 
-// Function to change zone color
-function changeZoneColor(newColor) {
-    zone.setStyle({color: newColor});
-}
-
-// Function to change point of interest color
-function changePOIColor(newColor) {
-    var newIcon = new L.Icon.Default();
-    newIcon.options.iconUrl = `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${newColor}.png`;
-    poi.setIcon(newIcon);
-}
-
-// Example usage of the functions to change colors
-// changeZoneColor('blue');
-// changePOIColor('blue');
-
-// Zone popup content
 var zonePopupContent = `
-    <h2>Westfall Zone of Influence</h2>
-    <p>The Westfall Zone of Influence is a protective safe zone that extends around Westfall. This area serves as a sanctuary for weary travelers and citizens seeking respite from the constant threats of orcs and goblins. Under the watchful eye of Westfall's skilled guards, peace and tranquility are maintained within the zone, allowing inhabitants to focus on their daily lives without fear.</p>
+    <h2>Westfall</h2>
+    <p>Currently neutral.</p>
 `;
 
 // Bind popup to zone
 zone.bindPopup(zonePopupContent);
+
+
+// Create sample zone polygon for factionsLayer
+var zone2 = L.polygon([
+    [-160, -806],
+    [-184, -781],
+    [-113, -663],
+    [-95, -692]
+], {
+    color: 'gray'
+}).addTo(factionsLayer); // Add the zone2 polygon to factionsLayer instead of the main map
+
+var zone2PopupContent = `
+    <h2>The Bridge</h2>
+    <p>Currently neutral.</p>
+`;
+
+// Bind popup to zone
+zone2.bindPopup(zone2PopupContent);
+
+// Create sample zone polygon for factionsLayer
+var zone3 = L.polygon([
+    [-344, -972],
+    [-522, -952],
+    [-513, -750],
+    [-278, -797]
+], {
+    color: 'gray'
+}).addTo(factionsLayer); // Add the zone3 polygon to factionsLayer instead of the main map
+
+var zone3PopupContent = `
+    <h2>Farmlands</h2>
+    <p>Currently neutral.</p>
+`;
+
+// Bind popup to zone
+zone3.bindPopup(zone3PopupContent);
+
+
+
+
+factionsLayer.addTo(map);
+
+const baseLayers = {
+  "Background": backgroundLayer
+};
+
+const overlayLayers = {
+  "Factions Zones": factionsLayer
+};
+
+// Add the backgroundLayer as the default base layer
+backgroundLayer.addTo(map);
+
+L.control.layers(baseLayers, overlayLayers).addTo(map);
 
 // Display coordinates on mousemove
 function showCoordinates(e) {
