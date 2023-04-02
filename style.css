@@ -102,3 +102,22 @@ footer {
   right: 25px;
   z-index: 1000;
 }
+
+@keyframes pulsate {
+  0% {
+    stroke-opacity: 1;
+    stroke-width: 5;
+  }
+  50% {
+    stroke-opacity: 0.01;
+    stroke-width: 5;
+  }
+  100% {
+    stroke-opacity: 1;
+    stroke-width: 5;
+  }
+}
+
+.pulsating-effect {
+  animation: pulsate 2s infinite;
+}
