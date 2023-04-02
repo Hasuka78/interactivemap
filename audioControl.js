@@ -1,26 +1,43 @@
-const audio = document.getElementById("background-audio");
-const playBtn = document.getElementById("play-btn");
-const muteUnmuteBtn = document.getElementById("mute-unmute-btn");
+const playButtons = document.querySelectorAll(".play-btn");
+const muteUnmuteButton = document.getElementById("mute-unmute-btn");
 const volumeSlider = document.getElementById("volume-slider");
+const audioElements = document.querySelectorAll("audio");
 
-// Event listener for play button
-playBtn.addEventListener("click", () => {
-  audio.play();
-  playBtn.style.display = "none";
+// Set initial volume of audio elements to match the volume slider value
+audioElements.forEach((audio) => {
+  audio.volume = volumeSlider.value;
+});
+let currentAudio = null;
+
+playButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const audioId = button.getAttribute("data-audio");
+    const audio = document.getElementById(audioId);
+
+    if (currentAudio && currentAudio !== audio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+    currentAudio = audio;
+  });
 });
 
-// Event listener for mute-unmute button
-muteUnmuteBtn.addEventListener("click", () => {
-  if (audio.muted) {
-    audio.muted = false;
-    muteUnmuteBtn.innerText = "Mute";
-  } else {
-    audio.muted = true;
-    muteUnmuteBtn.innerText = "Unmute";
+muteUnmuteButton.addEventListener("click", () => {
+  if (currentAudio) {
+    currentAudio.muted = !currentAudio.muted;
+    muteUnmuteButton.innerText = currentAudio.muted ? "Unmute" : "Mute";
   }
 });
 
-// Event listener for volume slider
+// Add this event listener for the volume slider
 volumeSlider.addEventListener("input", () => {
-  audio.volume = volumeSlider.value;
+  if (currentAudio) {
+    currentAudio.volume = volumeSlider.value;
+  }
 });
